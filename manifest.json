@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+	"name": "Transparent Standalone Images",
+	"version": "1.0",
+
+	"description": "Removes the white background added by Firefox behind transparent images.",
+
+	"content_scripts": [
+		{
+			"matches": ["*://*/*.png", "*://*/*.apng", "*://*/*.gif", "*://*/*.ico", "*://*/*.webp", "*://*/*.jxr"],
+			"css": ["no_white_bg.css"]
+		}
+	]
+}
